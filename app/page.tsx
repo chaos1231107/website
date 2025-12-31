@@ -59,7 +59,7 @@ export default function Portfolio() {
               </h2>
               <p className="leading-relaxed">
                 I'm currently studying Electronics at Gachon University, and my
-                research and development focus on rocket avionics and rocket
+                research and development are focused on rocket avionics and rocket
                 trajectory simulation systems. I am also working on adopting
                 quaternion and Error-State Kalman Filter–based sensor fusion
                 algorithms. I prioritize system design and experiments that
@@ -92,12 +92,31 @@ export default function Portfolio() {
             <Card>
               <CardContent className="p-6 space-y-4 text-gray-800">
                 <h3 className="text-xl font-semibold text-gray-900">
-                  GOAT-Ⅲ / GOAT-V Rocket Avionics
+                  GOAT-Ⅲ Rocket Avionics & Parachute Deployment
                 </h3>
                 <p>
-                  Altitude estimation and parachute deployment algorithms using
-                  LPF and Kalman Filter–based sensor fusion. Verified through
-                  real flight experiments.
+                  Exponential average–based altitude estimation and parachute
+                  deployment logic. Successful deployment but payload retreival faild.
+                </p>
+
+                <Button size="sm" asChild>
+                  <Link href="/projects/goat-3">
+                    자세히 보기
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6 space-y-4 text-gray-800">
+                <h3 className="text-xl font-semibold text-gray-900">
+                  GOAT-V Rocket Avionics & Sensor Fusion
+                </h3>
+                <p>
+                  LPF + Kalman Filter–based sensor fusion architecture for
+                  altitude and state estimation, validated through experimental
+                  flight data.
+                  Launch qualification was revoked du to canard fin issue.
                 </p>
 
                 <Button size="sm" asChild>
