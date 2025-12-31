@@ -9,8 +9,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 p-6">
       <div className="max-w-5xl mx-auto space-y-20">
-
-        {/* ================= Hero ================= */}
+        
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,8 +46,7 @@ export default function Portfolio() {
             </Button>
           </div>
         </motion.section>
-
-        {/* ================= About ================= */}
+        
         <section className="grid md:grid-cols-2 gap-8">
           <Card>
             <CardContent className="p-6 space-y-4 text-gray-800">
@@ -80,15 +78,14 @@ export default function Portfolio() {
             </CardContent>
           </Card>
         </section>
-
-        {/* ================= Projects ================= */}
+        
         <section className="space-y-8">
           <h2 className="text-3xl font-semibold text-gray-100">
             Projects
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {/* Project 1 */}
+            
             <Card>
               <CardContent className="p-6 space-y-4 text-gray-800">
                 <h3 className="text-xl font-semibold text-gray-900">
@@ -108,7 +105,6 @@ export default function Portfolio() {
               </CardContent>
             </Card>
 
-            {/* Project 2 */}
             <Card>
               <CardContent className="p-6 space-y-4 text-gray-800">
                 <h3 className="text-xl font-semibold text-gray-900">
@@ -128,8 +124,7 @@ export default function Portfolio() {
             </Card>
           </div>
         </section>
-
-        {/* ================= Contact ================= */}
+        
         <section className="text-center space-y-4">
           <h2 className="text-3xl font-semibold text-gray-100">
             Contact
