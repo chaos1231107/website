@@ -124,7 +124,7 @@ export default function Portfolio() {
                 <p>
                   LPF + Kalman Filter–based sensor fusion architecture for
                   altitude and state estimation. 
-                  Launch qualification was evoked due to canard fin issue.
+                  Launch qualification was deprived because of canard fin issue.
                 </p>
                 <Button size="sm" asChild>
                   <Link href="/projects/goat-v">View Details</Link>
