@@ -1,65 +1,109 @@
-import Image from "next/image";
+"use client";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
-export default function Home() {
+export default function Portfolio() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-gray-950 text-gray-100 p-6">
+      <div className="max-w-5xl mx-auto space-y-20">
+
+        {/* Hero */}
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center space-y-6"
+        >
+          <h1 className="text-5xl font-bold">
+            Park Keonwoo · Avionics & Embedded Engineer
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mt-3 text-lg text-gray-300">
+            Exploring what lies beyond what we have built so far.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+
+          <p className="text-xl text-gray-300">
+            Rocket · Drone · Sensor Fusion · Filtering Algorithms
+          </p>
+          <div className="flex justify-center gap-4">
+            <Button>GitHub</Button>
+            <Button variant="outline">CV 다운로드</Button>
+          </div>
+        </motion.section>
+
+        {/* About */}
+        <section className="grid md:grid-cols-2 gap-8">
+          <Card>
+            <CardContent className="p-6 space-y-4">
+              <h2 className="text-2xl font-semibold">About Me</h2>
+              <p className="text-gray-800 leading-relaxed">
+                I'm currently studying Electronics at Gachon University, and my research and development focus on rocket avionics and rocket trajectory simulation systems.
+                I am also working on adopting quaternion and Error-State Kalman Filter–based sensor fusion algorithms.
+                I prioritize system design and experiments that handle actual or simulated flight data.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-6 space-y-4">
+              <h2 className="text-2xl font-semibold">Core Skills</h2>
+              <ul className="list-disc list-inside text-gray-800 space-y-1">
+                <li>Python / C / C++ / Embedded Linux</li>
+                <li>EKF, UKF, LPF, Sensor Fusion</li>
+                <li>MPU6050, BMP280, Raspberry Pi, MCU</li>
+                <li>Avionics System Architecture</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Projects */}
+        <section className="space-y-8">
+          <h2 className="text-3xl font-semibold">Projects</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card>
+              <CardContent className="p-6 space-y-3">
+                <h3 className="text-xl font-semibold">GOAT ‑ Ⅲ Rocket Avionics and parachute deployment algorithm</h3>
+                <p className="text-gray-800">
+                  Exponential Average Filter - Based altitude estimation system
+                  Prachute Deployment succeed, Payload retrival failed
+                </p>
+
+                <h3 className="text-xl font-semibold">GOAT ‑ V Rocket Avionics and sensor fusion algorithm </h3>
+                <p className="text-gray-800">
+                  Low Pass Filter + Kalman Filter - Based sensor fusion & altitude estimation algorithm
+                </p>
+
+                <Button size="sm">자세히 보기</Button>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6 space-y-3">
+                <h3 className="text-xl font-semibold">IMU Based Attitude Estimtion System</h3>
+                <p className="text-gray-800">
+                  Design of an MPU6050-based real-time roll, pitch, and yaw estimation system, 
+                  including bias estimation and drift suppression algorithms.
+                </p>
+
+                <h3 className="text-xl font-semibold">Developing Rocket Simulator for research and verification of algorithms </h3>
+                <p className="text-gray-800">
+                  Developing quaternion and ESKF based attitude estimation algorithm
+                </p>
+                <Button size="sm">자세히 보기</Button>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Contact */}
+        <section className="text-center space-y-4">
+          <h2 className="text-3xl font-semibold">Contact</h2>
+          <p className="text-gray-800">연구·프로젝트·협업 관련 연락 환영합니다.</p>
+          <p className="text-lg">Email: hiccupkw@naver.com</p>
+        </section>
+
+      </div>
     </div>
   );
 }
