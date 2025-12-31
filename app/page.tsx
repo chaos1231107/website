@@ -41,7 +41,7 @@ export default function Portfolio() {
 
             <Button variant="outline" asChild>
               <Link
-                href="https://velog.io/@hiccupkw"
+                href="https://velog.io/@chaos1231107/posts"
                 target="_blank"
                 rel="noopener noreferrer"
               >
