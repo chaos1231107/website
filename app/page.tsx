@@ -114,8 +114,7 @@ export default function Portfolio() {
                 </h3>
                 <p>
                   LPF + Kalman Filter–based sensor fusion architecture for
-                  altitude and state estimation, validated through experimental
-                  flight data.
+                  altitude and state estimation.
                   Launch qualification was revoked du to canard fin issue.
                 </p>
 
