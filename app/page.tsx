@@ -9,7 +9,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 p-6">
       <div className="max-w-5xl mx-auto space-y-20">
-        
+
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -40,13 +40,17 @@ export default function Portfolio() {
             </Button>
 
             <Button variant="outline" asChild>
-              <Link href="/cv.pdf" target="_blank">
-                CV 다운로드
+              <Link
+                href="https://velog.io/@hiccupkw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Velog
               </Link>
             </Button>
           </div>
         </motion.section>
-        
+
         <section className="grid md:grid-cols-2 gap-8">
           <Card>
             <CardContent className="p-6 space-y-4 text-gray-800">
@@ -78,14 +82,13 @@ export default function Portfolio() {
             </CardContent>
           </Card>
         </section>
-        
+
         <section className="space-y-8">
           <h2 className="text-3xl font-semibold text-gray-100">
             Projects
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-            
             <Card>
               <CardContent className="p-6 space-y-4 text-gray-800">
                 <h3 className="text-xl font-semibold text-gray-900">
@@ -124,7 +127,7 @@ export default function Portfolio() {
             </Card>
           </div>
         </section>
-        
+
         <section className="text-center space-y-4">
           <h2 className="text-3xl font-semibold text-gray-100">
             Contact
