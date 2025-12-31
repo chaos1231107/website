@@ -101,7 +101,7 @@ export default function Portfolio() {
 
                 <Button size="sm" asChild>
                   <Link href="/projects/goat-3">
-                    자세히 보기
+                    View Details
                   </Link>
                 </Button>
               </CardContent>
@@ -120,7 +120,7 @@ export default function Portfolio() {
 
                 <Button size="sm" asChild>
                   <Link href="/projects/goat-v">
-                    자세히 보기
+                    View Details
                   </Link>
                 </Button>
               </CardContent>
@@ -138,7 +138,7 @@ export default function Portfolio() {
 
                 <Button size="sm" asChild>
                   <Link href="/projects/imu">
-                    자세히 보기
+                    View Details
                   </Link>
                 </Button>
               </CardContent>
