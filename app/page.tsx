@@ -111,7 +111,13 @@ export default function Portfolio() {
                   deployment logic. Successful deployment but payload retrieval failed.
                 </p>
                 <Button size="sm" asChild>
-                  <Link href="/projects/goat-3">View Details</Link>
+                  <Link
+                    href="https://www.notion.so/2023-GOAT-project-2da4ad4fc378803d9329df0d2122cac7?source=copy_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Details
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
