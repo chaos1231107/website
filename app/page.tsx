@@ -90,7 +90,7 @@ export default function Portfolio() {
               <ul className="list-disc list-inside space-y-1">
                 <li>Python / C / C++ / Embedded Linux</li>
                 <li>EKF, UKF, LPF, Sensor Fusion</li>
-                <li>MPU6050, BMP280, Raspberry Pi, MCU</li>
+                <li>MPU6050, BMP280, Raspberry Pi, Arduino</li>
                 <li>Avionics System Architecture</li>
               </ul>
             </CardContent>
