@@ -95,7 +95,7 @@ export default function Portfolio() {
                   GOAT-Ⅲ Rocket Avionics & Parachute Deployment
                 </h3>
                 <p>
-                  Exponential average–based altitude estimation and parachute
+                  Exponential Average Filter –based altitude estimation and parachute
                   deployment logic. Successful deployment but payload retreival faild.
                 </p>
 
