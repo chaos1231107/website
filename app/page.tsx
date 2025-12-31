@@ -1,6 +1,7 @@
-"use client";
+use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -9,7 +10,7 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gray-950 text-gray-100 p-6">
       <div className="max-w-5xl mx-auto space-y-20">
 
-        {/* Hero */}
+        {/* ================= Hero ================= */}
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -29,12 +30,25 @@ export default function Portfolio() {
           </p>
 
           <div className="flex justify-center gap-4">
-            <Button>GitHub</Button>
-            <Button variant="outline">CV 다운로드</Button>
+            <Button asChild>
+              <Link
+                href="https://github.com/chaos1231107"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </Link>
+            </Button>
+
+            <Button variant="outline" asChild>
+              <Link href="/cv.pdf" target="_blank">
+                CV 다운로드
+              </Link>
+            </Button>
           </div>
         </motion.section>
 
-        {/* About */}
+        {/* ================= About ================= */}
         <section className="grid md:grid-cols-2 gap-8">
           <Card>
             <CardContent className="p-6 space-y-4 text-gray-800">
@@ -42,10 +56,11 @@ export default function Portfolio() {
                 About Me
               </h2>
               <p className="leading-relaxed">
-                I'm currently studying Electronics at Gachon University, and my research
-                and development focus on rocket avionics and rocket trajectory simulation systems.
-                I am also working on adopting quaternion and Error-State Kalman Filter–based
-                sensor fusion algorithms. I prioritize system design and experiments that
+                I'm currently studying Electronics at Gachon University, and my
+                research and development focus on rocket avionics and rocket
+                trajectory simulation systems. I am also working on adopting
+                quaternion and Error-State Kalman Filter–based sensor fusion
+                algorithms. I prioritize system design and experiments that
                 handle actual or simulated flight data.
               </p>
             </CardContent>
@@ -66,70 +81,69 @@ export default function Portfolio() {
           </Card>
         </section>
 
-        {/* Projects */}
+        {/* ================= Projects ================= */}
         <section className="space-y-8">
           <h2 className="text-3xl font-semibold text-gray-100">
             Projects
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
+            {/* Project 1 */}
             <Card>
               <CardContent className="p-6 space-y-4 text-gray-800">
                 <h3 className="text-xl font-semibold text-gray-900">
-                  GOAT-Ⅲ Rocket Avionics & Parachute Deployment Algorithm
+                  GOAT-Ⅲ / GOAT-V Rocket Avionics
                 </h3>
                 <p>
-                  Exponential Average Filter–based altitude estimation system.
-                  Parachute deployment succeeded; payload retrieval failed.
+                  Altitude estimation and parachute deployment algorithms using
+                  LPF and Kalman Filter–based sensor fusion. Verified through
+                  real flight experiments.
                 </p>
 
-                <h3 className="text-xl font-semibold text-gray-900">
-                  GOAT-V Rocket Avionics & Sensor Fusion Algorithm
-                </h3>
-                <p>
-                  Low-Pass Filter + Kalman Filter–based sensor fusion and
-                  altitude estimation algorithm.
-                </p>
-
-                <Button size="sm">자세히 보기</Button>
+                <Button size="sm" asChild>
+                  <Link href="/projects/goat-v">
+                    자세히 보기
+                  </Link>
+                </Button>
               </CardContent>
             </Card>
 
+            {/* Project 2 */}
             <Card>
               <CardContent className="p-6 space-y-4 text-gray-800">
                 <h3 className="text-xl font-semibold text-gray-900">
                   IMU-Based Attitude Estimation System
                 </h3>
                 <p>
-                  Design of an MPU6050-based real-time roll, pitch, and yaw
-                  estimation system, including bias estimation and drift
-                  suppression algorithms.
+                  MPU6050-based real-time roll, pitch, yaw estimation system with
+                  bias estimation and drift suppression using ESKF.
                 </p>
 
-                <h3 className="text-xl font-semibold text-gray-900">
-                  Rocket Simulator for Algorithm Verification
-                </h3>
-                <p>
-                  Development of quaternion- and ESKF-based attitude estimation
-                  algorithms for research and validation.
-                </p>
-
-                <Button size="sm">자세히 보기</Button>
+                <Button size="sm" asChild>
+                  <Link href="/projects/imu">
+                    자세히 보기
+                  </Link>
+                </Button>
               </CardContent>
             </Card>
           </div>
         </section>
 
-        {/* Contact */}
+        {/* ================= Contact ================= */}
         <section className="text-center space-y-4">
           <h2 className="text-3xl font-semibold text-gray-100">
             Contact
           </h2>
           <p className="text-gray-300">
-            연구·프로젝트·협업 관련 연락 환영합니다.
+            연구 · 프로젝트 · 협업 관련 연락 환영합니다.
           </p>
           <p className="text-lg text-gray-200">
-            Email: hiccupkw@naver.com
+            <a
+              href="mailto:hiccupkw@naver.com"
+              className="underline hover:text-white"
+            >
+              hiccupkw@naver.com
+            </a>
           </p>
         </section>
 
@@ -137,4 +151,3 @@ export default function Portfolio() {
     </div>
   );
 }
-
